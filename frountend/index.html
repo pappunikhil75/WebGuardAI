@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>WebGuard AI</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            🛡️ WebGuard <span>AI</span>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            AI Protection Active
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="hero">
+
+            <div class="badge">
+                AI-POWERED WEBSITE SECURITY
+            </div>
+
+            <h1>
+                Detect Fake &amp; Phishing
+                <span>Websites</span>
+            </h1>
+
+            <p>
+                Analyze a website URL using machine learning
+                and identify potentially dangerous websites.
+            </p>
+
+        </section>
+
+
+        <section class="scanner-card">
+
+            <h2>Scan a Website</h2>
+
+            <p class="subtitle">
+                Enter a URL below to analyze its security.
+            </p>
+
+
+            <div class="input-group">
+
+                <input
+                    type="text"
+                    id="urlInput"
+                    placeholder="https://example.com"
+                    autocomplete="off"
+                >
+
+                <button
+                    id="scanButton"
+                    onclick="scanWebsite()"
+                >
+                    Scan Website
+                </button>
+
+            </div>
+
+
+            <div
+                id="errorMessage"
+                class="error-message"
+            ></div>
+
+
+            <div
+                id="loading"
+                class="loading hidden"
+            >
+                <div class="spinner"></div>
+
+                <p>
+                    Analyzing website...
+                </p>
+            </div>
+
+        </section>
+
+
+        <section
+            id="resultSection"
+            class="result-section hidden"
+        >
+
+            <div class="result-header">
+
+                <div>
+                    <p class="result-label">
+                        SCAN RESULT
+                    </p>
+
+                    <h2 id="prediction">
+                        LEGITIMATE
+                    </h2>
+                </div>
+
+                <div
+                    id="riskBadge"
+                    class="risk-badge"
+                >
+                    LOW RISK
+                </div>
+
+            </div>
+
+
+            <div class="scanned-url">
+
+                <span>Scanned URL</span>
+
+                <strong id="scannedUrl">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div class="probability-grid">
+
+                <div class="probability-card">
+
+                    <div class="probability-title">
+                        Phishing Probability
+                    </div>
+
+                    <div
+                        id="phishingProbability"
+                        class="probability-value"
+                    >
+                        0%
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="phishingBar"
+                            class="progress-fill phishing"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <div class="probability-card">
+
+                    <div class="probability-title">
+                        Legitimate Probability
+                    </div>
+
+                    <div
+                        id="legitimateProbability"
+                        class="probability-value"
+                    >
+                        0%
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            id="legitimateBar"
+                            class="progress-fill legitimate"
+                        ></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="resultMessage"
+                class="result-message"
+            ></div>
+
+        </section>
+
+
+        <section class="features">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🔍
+                </div>
+
+                <h3>
+                    URL Analysis
+                </h3>
+
+                <p>
+                    Examines URL characteristics and
+                    suspicious patterns.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+                    Uses a Random Forest classification
+                    model trained on phishing data.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Fast Detection
+                </h3>
+
+                <p>
+                    Analyze a website URL and receive
+                    results within seconds.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            WebGuard AI © 2026
+        </p>
+
+        <p>
+            AI-powered phishing detection
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

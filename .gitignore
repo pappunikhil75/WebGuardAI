@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+*/__pycache__/
+*.pyc
+.env
+
+dataset/
+model/webguard_model.pkl
+model/webguard_model_v2.pkl
+model/webguard_url_model.pkl
