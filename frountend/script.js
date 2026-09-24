@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000/predict";
+const API_URL = "https://webguardai-da6a.onrender.com/predict";
 
 
 async function scanWebsite() {
